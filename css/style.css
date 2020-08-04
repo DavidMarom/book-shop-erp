@@ -1,0 +1,175 @@
+html {
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+p {
+    margin: 1px
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.table-head {
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30%;
+    font-weight: bold;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: 5% 30% 30% 10% 10% 10%;
+}
+
+.head-cells {
+    padding: 5px;
+    border-radius: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    background-color: #b3c7e6;
+    cursor: pointer;
+}
+
+.tc {
+    padding: 5px;
+    border-radius: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    background-color: #dae1ec;
+}
+
+.create-new {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+
+.create-new:hover {
+    color: #0000ff;
+    cursor: pointer;
+}
+
+.newBookModal {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: #dbade9;
+    width: 50%;
+    height: 130px;
+    padding: 30px;
+}
+
+.hide {
+    display: none;
+}
+
+.delete-btn {
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: #0000ff;
+    cursor: pointer;
+}
+
+.update-btn {
+    cursor: pointer;
+}
+
+.update-btn:hover {
+    color: #e78e00;
+    cursor: pointer;
+}
+
+.read-btn {
+    cursor: pointer;
+}
+
+.read-btn:hover {
+    color: #06c200;
+    cursor: pointer;
+}
+
+.div-b {
+    padding: 20px;
+    background-color: #eee;
+}
+
+.panel-title {
+    text-align: center;
+    background-color: #ddd;
+}
+
+input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.rate-controller {
+    display: grid;
+    grid-template-columns: 18% 20% 40% 20%;
+}
+
+.rate-cell {
+    cursor: pointer;
+    background-color: #c4d3e9;
+    text-align: center;
+}
+
+.rate-cell:hover {
+    cursor: pointer;
+    background-color: #7da4e0;
+    text-align: center;
+}
+
+.rate-number {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.pagination {
+    cursor: default;
+    display: grid;
+    grid-template-columns: 10% 75% 10%;
+}
+
+.page-btn {
+    background-color: #4295da;
+    text-align: center;
+    color: #eee;
+}
+
+.page-btn:hover {
+    background-color: #1763a1;
+    text-align: center;
+    color: #fff;
+}
+
+.pages {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+.page{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #c3d5e4;
+    margin-right: 1px;
+}
+
+.page:hover{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #6ea0c9;
+    margin-right: 1px;
+}
+
+.mark-page-btn{
+    background-color: #3772a3;
+    color: rgb(255, 255, 255);
+
+}
