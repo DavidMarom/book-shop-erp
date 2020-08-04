@@ -1,8 +1,6 @@
 'use strict'
 
-$(document).ready(function(){
-    $(".toast").toast("show")
-})
+
 
 function onAddBookClick() {
     addBook();

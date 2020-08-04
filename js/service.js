@@ -96,11 +96,11 @@ function updateBook() {
 function renderPanel(bookId) {
     var bookPos = getBookArryPos(bookId);
     document.querySelector('.panel-title h3').innerText = gBooks[bookPos].title;
-    document.querySelector('.panel-description').innerText = `Price: ${ formatCurrency(   gBooks[bookPos].price ) }`;
+    document.querySelector('.panel-description').innerText = `Price: ${formatCurrency(gBooks[bookPos].price)}`;
     document.querySelector('.panel-pic').innerHTML = `<a href="${gBooks[bookPos].img}" target="_blank"><img src="${gBooks[bookPos].img}" height="200px" /></a>`;
     document.querySelector('.rate-controller').innerHTML = `
 
-        <div><p>Rate: </p></div>
+        <div data-trans="rate"><p>Rate: </p></div>
         <div class="rate-cell right" onclick="onMinusClicked(${bookPos},${bookId})">-</div>
         <div class="rate-number">${gBooks[bookPos].rate}</div>
         <div class="rate-cell left" onclick="onPlusClicked(${bookPos},${bookId})">+</div>

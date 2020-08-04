@@ -55,6 +55,21 @@ var gTrans = {
         en: 'Delete',
         ru: 'Удалить',
         he: 'מחק'
+    },
+    newbook: {
+        en: '+ New book',
+        ru: '+ Новая книга',
+        he: '+ הוספת ספר'
+    },
+    rate: {
+        en: 'Rate',
+        ru: 'ставка',
+        he: 'דרוג'
+    },
+    load: {
+        en: 'Load Data',
+        ru: 'Загрузить данные',
+        he: 'טען נתונים'
     }
 }
 

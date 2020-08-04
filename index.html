@@ -17,7 +17,7 @@
 <body onload="init()">
     <aside class="offcanvas-aside text-light">
         <form>
-            <h2>Add a Book</h2>
+            <h2 data-trans="newbook">Add a Book</h2>
             <h2>--------------</h2>
             <label>Id</label>
             <div><input type="text" class="id-input"></input></div>
@@ -42,8 +42,8 @@
 
 
     <nav class="navbar navbar-dark bg-dark ">
-        <a class="navbar-brand cursor-pointer " onclick='openCanvas()'>+ New book</a>
-        <a class="navbar-brand cursor-pointer ml-auto" onclick="loadDump()">Load data</a>
+        <a class="navbar-brand cursor-pointer " data-trans="newbook" onclick='openCanvas()'>+ New book</a>
+        <a class="navbar-brand cursor-pointer ml-auto" data-trans="load" onclick="loadDump()">Load data</a>
 
         <select name="lang-select" class="nav-item dropdown " onchange="onLangSelect(this.value)">
             <option value="en">English</option>
@@ -90,7 +90,7 @@
                         <div class="panel-pic col-sm-4"></div>
 
                         <div class="col-sm-8">
-                            <div class="panel-description">
+                            <div class="panel-description" data-trans="price">
                                 <p></p>
                             </div>
                             <div class="rate-controller">
