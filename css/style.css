@@ -3,6 +3,10 @@ html {
     font-family: 'Varela Round', sans-serif;
 }
 
+body.rtl {
+    direction: rtl;
+}
+
 p {
     margin: 1px
 }
@@ -43,6 +47,7 @@ p {
 .create-new {
     font-family: 'Courier New', Courier, monospace;
     padding: 10px;
+    display: inline; 
 }
 
 .create-new:hover {

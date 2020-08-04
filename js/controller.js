@@ -55,7 +55,7 @@ function onTitleClicked() {
 }
 
 function onTitleClickedPrice() {
-console.log('in controller')
+    console.log('in controller')
     if (gSortDirectionPrice == 'up') gSortDirectionPrice = 'down';
     else {
         gSortDirectionPrice = 'up'
@@ -63,18 +63,34 @@ console.log('in controller')
     sortByPrice();
 }
 
-function onNextPageClick(){
+function onNextPageClick() {
     goNextPage();
     renderBooks();
     generatePageNumbers();
 }
 
-function onBackPageClick(){
+function onBackPageClick() {
     goBackPage();
     renderBooks();
 }
 
-function onPageClick(pageNumber){
+function onPageClick(pageNumber) {
     goPageNumber(pageNumber);
     generatePageNumbers();
+}
+
+function onLangSelect(lang) {
+    setLang(lang);
+
+
+    // TODO: if lang is hebrew add RTL class to document.body
+    if (lang === 'he') {
+        document.body.classList.add('rtl')
+    } else {
+        document.body.classList.remove('rtl')
+    }
+    doTrans();
+    render();
+
+
 }

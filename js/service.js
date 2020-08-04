@@ -34,14 +34,15 @@ function renderBooks() {
             <div class="tc">${gBook.id}</div>
             <div class="tc">${gBook.title}</div>
             <div class="tc">${gBook.price}</div>
-            <div class="tc read-btn" onclick="onClickRead(${gBook.id})">Read</div>
-            <div class="tc update-btn" onclick="onUpdateBookFromList(${gBook.id})">Update</div>
-            <div class="tc delete-btn" onclick="onClickDelete(${gBook.id})">Delete</div>`
+            <div class="tc read-btn" onclick="onClickRead(${gBook.id})" data-trans="read">Read</div>
+            <div class="tc update-btn" onclick="onUpdateBookFromList(${gBook.id})" data-trans="update">Update</div>
+            <div class="tc delete-btn" onclick="onClickDelete(${gBook.id})" data-trans="delete">Delete</div>`
     })
 
     var elTable = document.querySelector('.table');
     elTable.innerHTML = '';
     elTable.innerHTML += strHTML;
+    doTrans();
 }
 
 function addBook() {
