@@ -1,9 +1,14 @@
 'use strict'
 
+$(document).ready(function(){
+    $(".toast").toast("show")
+})
+
 function onAddBookClick() {
     addBook();
     cleanModalFields(); // clean fields
-    closeModal();
+    //closeModal();
+    openCanvas();
     renderBooks();
 }
 
@@ -13,7 +18,8 @@ function onClickDelete(iDx) {
 }
 
 function onUpdateBookFromList(bookId) {
-    openModal();
+    //openModal();
+    openCanvas()
     setModalBtn('update');
     populateFieldsInModal(bookId);
     gBookPosHandle = getBookArryPos(bookId);

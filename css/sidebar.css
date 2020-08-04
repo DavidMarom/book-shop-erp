@@ -1,0 +1,58 @@
+
+
+.offcanvas-btn {
+    z-index: 100000;
+    position: fixed;
+    bottom: 8%;
+    right: 3%;
+    height: 50px;
+    width: 50px;
+    background: #e2cb36;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 0;
+    transition: all 0.3s ease;
+}
+.offcanvas-btn-open {
+    margin-right: 80vw;
+}
+.offcanvas-aside {
+    position: fixed;
+    height: 100%;
+    background: #000000cc;
+    
+    width: 80vw;
+    right: -80vw;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.offcanvas-aside img {
+    border-radius: 50%;
+}
+.offcanvas-aside p {
+    text-align: center;
+}
+.offcanvas-aside .offcanvas-content-suffix {
+    height: 20%;
+}
+
+@media (min-width: 575px) {
+    .offcanvas-btn-open {
+        margin-right: 30vw;
+    }
+    .offcanvas-aside {
+        width: 30vw;
+        right: -30vw;
+    }
+}
+.offcanvas-aside-open {
+    right: 0;
+    
+}

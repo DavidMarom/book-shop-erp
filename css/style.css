@@ -11,20 +11,35 @@ p {
     margin: 1px
 }
 
-.container2 {
+body{
+    font-family: 'Varela Round', sans-serif;
+    background-color: #f3f3f3;
+
+}
+/* https://colorhunt.co/palette/202295 */
+/* https://colorhunt.co/palette/106550 */
+/* https://colorhunt.co/palette/195714 */
+
+.header2{
+    padding: 30px;
+    background-color: #411f1f;
+    color:#fff;
+}
+
+/* .container2 {
     display: grid;
     grid-template-columns: 70% 30%;
-}
+} */
 
 .table-head {
     display: grid;
-    grid-template-columns: 5% 30% 30% 30%;
+    grid-template-columns: 5% 40% 25% 30%;
     font-weight: bold;
 }
 
 .table {
     display: grid;
-    grid-template-columns: 5% 30% 30% 10% 10% 10%;
+    grid-template-columns: 5% 40% 25% 10% 10% 10%;
 }
 
 .head-cells {
@@ -32,7 +47,7 @@ p {
     border-radius: 1px;
     margin-right: 1px;
     margin-bottom: 1px;
-    background-color: #b3c7e6;
+    background-color: #86c4ba;
     cursor: pointer;
 }
 
@@ -41,14 +56,14 @@ p {
     border-radius: 1px;
     margin-right: 1px;
     margin-bottom: 1px;
-    background-color: #dae1ec;
+    background-color: #cedebd;
 }
 
-.create-new {
+/* .create-new {
     font-family: 'Courier New', Courier, monospace;
     padding: 10px;
     display: inline; 
-}
+} */
 
 .create-new:hover {
     color: #0000ff;
@@ -56,12 +71,12 @@ p {
 }
 
 .newBookModal {
-    display: grid;
-    grid-template-columns: 30% 70%;
+    /* display: grid; */
+    /* grid-template-columns: 30% 70%;
     background-color: #dbade9;
     width: 50%;
     height: 130px;
-    padding: 30px;
+    padding: 30px; */
 }
 
 .hide {
@@ -96,14 +111,17 @@ p {
 }
 
 .div-b {
-    padding: 20px;
-    background-color: #eee;
+    padding: 0px;
+    background-color: #cedebd;
+    height: 700px;
 }
 
 .panel-title {
     text-align: center;
-    background-color: #ddd;
+    background-color: #86c4ba;
 }
+
+
 
 input[type="text"] {
     width: 100%;
@@ -119,37 +137,37 @@ input[type="text"] {
 
 .rate-cell {
     cursor: pointer;
-    background-color: #c4d3e9;
+    background-color: #86c4ba;
     text-align: center;
 }
 
 .rate-cell:hover {
     cursor: pointer;
-    background-color: #7da4e0;
+    background-color: #6da59c;
     text-align: center;
 }
 
 .rate-number {
-    background-color: #ffffff;
+    background-color: #f3f3f3;
     text-align: center;
 }
 
 .pagination {
     cursor: default;
     display: grid;
-    grid-template-columns: 10% 75% 10%;
+    grid-template-columns: 15% 70% 15%;
 }
 
 .page-btn {
-    background-color: #4295da;
+    background-color: #86c4ba;
     text-align: center;
-    color: #eee;
+    color: #f3f3f3;
 }
 
 .page-btn:hover {
-    background-color: #1763a1;
+    background-color: #6ea097;
     text-align: center;
-    color: #fff;
+    color: #f3f3f3;
 }
 
 .pages {
@@ -162,19 +180,23 @@ input[type="text"] {
 .page{
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #c3d5e4;
+    background-color: #cedebd;
     margin-right: 1px;
 }
 
 .page:hover{
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #6ea0c9;
+    background-color: #86c4ba;
     margin-right: 1px;
 }
 
 .mark-page-btn{
-    background-color: #3772a3;
+    background-color: #86c4ba;
     color: rgb(255, 255, 255);
 
+}
+
+.cursor-pointer{
+    cursor: pointer;
 }
