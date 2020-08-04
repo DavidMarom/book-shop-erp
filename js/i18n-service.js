@@ -36,22 +36,22 @@ var gTrans = {
         ru: 'назад',
         he: 'קודם'
     },
-    headline : {
+    headline: {
         en: 'Bookshop ERP',
         ru: 'книжный EPП',
         he: 'ניהול ספרים'
     },
-    read : {
+    read: {
         en: 'Read',
         ru: 'читать',
         he: 'קרא'
     },
-    update : {
+    update: {
         en: 'Update',
         ru: 'Обновить',
         he: 'עדכן'
     },
-    delete : {
+    delete: {
         en: 'Delete',
         ru: 'Удалить',
         he: 'מחק'
@@ -70,11 +70,13 @@ function doTrans() {
     var els = document.querySelectorAll('[data-trans]')
     els.forEach(function (el) {
         var transKey = el.dataset.trans
-        var trans = getTrans(transKey)
-        if (el.nodeName === 'INPUT') {
-            el.placeholder = trans
-        } else {
-            el.innerText = trans
+        if (transKey != 'info') {
+            var trans = getTrans(transKey)
+            if (el.nodeName === 'INPUT') {
+                el.placeholder = trans
+            } else {
+                el.innerText = trans
+            }
         }
     })
 
@@ -82,7 +84,6 @@ function doTrans() {
 
 function setLang(lang) {
     gCurrLang = lang;
-    console.log(lang);
 }
 
 function formatNumOlder(num) {
@@ -94,10 +95,31 @@ function formatNum(num) {
 }
 
 function formatCurrency(num) {
+
+
+    if(gCurrLang==='he'){
     return new Intl.NumberFormat('he-IL', {
         style: 'currency',
         currency: 'ILS'
     }).format(num);
+    }
+
+    if(gCurrLang==='en'){
+        return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }).format(num);
+        }
+    
+        if(gCurrLang==='ru'){
+            return new Intl.NumberFormat('ru', {
+                style: 'currency',
+                currency: 'RUB'
+            }).format(num);
+            }
+        
+
+
 }
 
 function formatDate(time) {

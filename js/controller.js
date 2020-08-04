@@ -29,6 +29,9 @@ function onUpdatekClick() {
 }
 
 function onClickRead(BookId) {
+    gBookLoaded = true;
+
+    gBookPosHandle = BookId;
     renderPanel(BookId);
 }
 
@@ -89,8 +92,11 @@ function onLangSelect(lang) {
     } else {
         document.body.classList.remove('rtl')
     }
+
+    //gBookLoaded = false;
+    renderBooks();
+    renderPanel(gBookPosHandle);
     doTrans();
-    render();
 
 
 }

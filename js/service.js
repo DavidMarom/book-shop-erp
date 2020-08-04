@@ -5,7 +5,7 @@ var gPageIdx = 0;
 var gBookPosHandle; // used by the update feature
 var gSortDirection = 'up';
 var gSortDirectionPrice = 'up';
-
+var gBookLoaded = false;
 var gBooks = [];
 
 function init() {
@@ -33,7 +33,7 @@ function renderBooks() {
         strHTML += `    
             <div class="tc">${gBook.id}</div>
             <div class="tc">${gBook.title}</div>
-            <div class="tc">${gBook.price}</div>
+            <div class="tc">${formatCurrency(gBook.price)}</div>
             <div class="tc read-btn" onclick="onClickRead(${gBook.id})" data-trans="read">Read</div>
             <div class="tc update-btn" onclick="onUpdateBookFromList(${gBook.id})" data-trans="update">Update</div>
             <div class="tc delete-btn" onclick="onClickDelete(${gBook.id})" data-trans="delete">Delete</div>`
@@ -96,7 +96,7 @@ function updateBook() {
 function renderPanel(bookId) {
     var bookPos = getBookArryPos(bookId);
     document.querySelector('.panel-title h1').innerText = gBooks[bookPos].title;
-    document.querySelector('.panel-description').innerText = `Price: ${gBooks[bookPos].price}`;
+    document.querySelector('.panel-description').innerText = `Price: ${ formatCurrency(   gBooks[bookPos].price ) }`;
     document.querySelector('.panel-pic').innerHTML = `<a href="${gBooks[bookPos].img}" target="_blank"><img src="${gBooks[bookPos].img}" height="200px" /></a>`;
     document.querySelector('.rate-controller').innerHTML = `        
         <div><p>Rate: </p></div>
@@ -249,7 +249,7 @@ function goBackPage() {
 }
 
 function goPageNumber(pageNumber) {
-    gPageIdx = pageNumber ;
+    gPageIdx = pageNumber;
     renderBooks();
     generatePageNumbers();
 
@@ -261,8 +261,8 @@ function generatePageNumbers() {
     var HTMLstr = ``;
     for (var i = 0; i <= pageCount; i++) {
         HTMLstr += `<div class="page`;
-        if (i==gPageIdx) HTMLstr+=` mark-page-btn`;
-        HTMLstr+=`" onclick="onPageClick(${i})">${i+1}</div>`;
+        if (i == gPageIdx) HTMLstr += ` mark-page-btn`;
+        HTMLstr += `" onclick="onPageClick(${i})">${i+1}</div>`;
     }
     document.querySelector('.pages').innerHTML = HTMLstr;
 }
