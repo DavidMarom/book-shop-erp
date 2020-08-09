@@ -60,7 +60,6 @@ function onTitleClicked() {
 }
 
 function onTitleClickedPrice() {
-    console.log('in controller')
     if (gSortDirectionPrice == 'up') gSortDirectionPrice = 'down';
     else {
         gSortDirectionPrice = 'up'

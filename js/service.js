@@ -10,7 +10,7 @@ var gBooks = [];
 
 function init() {
     if (!loadFromStorage('books') || loadFromStorage('books') == '') { // if nothing in storage
-        null;
+        loadDump();
     } else {
         gBooks = loadFromStorage('books');
     }
@@ -20,6 +20,39 @@ function init() {
 
 function _saveBooksToStorage() {
     saveToStorage(KEY, gBooks)
+}
+
+// function renderTableHead() {
+//     var strHTML = ``;
+
+//     strHTML += `<div class="head-cells" data-trans="id">Id</div>
+//             <div class="head-cells" data-trans="title" onclick="onTitleClicked()">Title </div>
+//             <div class="head-cells" data-trans="price" onclick="onTitleClickedPrice()">Price</div>
+//             <div class="head-cells" data-trans="action">Actieeeons</div>`
+
+//     var elTable = document.querySelector('.table-head');
+//     elTable.innerHTML = '';
+//     elTable.innerHTML += strHTML;
+
+// }
+
+function addSortArrows() {
+    var titEl = document.querySelector('.title-title');
+
+    if (gSortDirection == 'up') {
+        titEl.innerText += ` ▲`
+    } else {
+        titEl.innerText += ` ▼`
+    }
+
+    var titEl2 = document.querySelector('.price-title');
+
+    if (gSortDirectionPrice == 'up') {
+        titEl2.innerText += ` ▲`
+    } else {
+        titEl2.innerText += ` ▼`
+    }
+
 }
 
 function renderBooks() {
@@ -43,6 +76,8 @@ function renderBooks() {
     elTable.innerHTML = '';
     elTable.innerHTML += strHTML;
     doTrans();
+    addSortArrows();
+
 }
 
 function addBook() {
