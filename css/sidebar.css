@@ -16,9 +16,11 @@
     margin-right: 0;
     transition: all 0.3s ease;
 }
+
 .offcanvas-btn-open {
     margin-right: 80vw;
 }
+
 .offcanvas-aside {
     position: fixed;
     height: 100%;
@@ -33,12 +35,15 @@
     align-items: center;
     justify-content: space-around;
 }
+
 .offcanvas-aside img {
     border-radius: 50%;
 }
+
 .offcanvas-aside p {
     text-align: center;
 }
+
 .offcanvas-aside .offcanvas-content-suffix {
     height: 20%;
 }

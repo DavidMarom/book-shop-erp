@@ -1,5 +1,5 @@
 html {
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Varela Round', sans-serif;
 }
 
@@ -13,17 +13,14 @@ p {
 
 body{
     font-family: 'Varela Round', sans-serif;
-    background-color: #f3f3f3;
+    background-color: #eeecfa;
 
 }
-/* https://colorhunt.co/palette/202295 */
-/* https://colorhunt.co/palette/106550 */
-/* https://colorhunt.co/palette/195714 */
 
 .header2{
     padding: 30px;
-    background-color: #411f1f;
-    color:#fff;
+    background-color: #f5f5f5;
+    color:#555;
 }
 
 /* .container2 {
@@ -47,8 +44,9 @@ body{
     border-radius: 1px;
     margin-right: 1px;
     margin-bottom: 1px;
-    background-color: #86c4ba;
+    background-color: #dadada;
     cursor: pointer;
+    color:#464646;
 }
 
 .tc {
@@ -56,7 +54,8 @@ body{
     border-radius: 1px;
     margin-right: 1px;
     margin-bottom: 1px;
-    background-color: #cedebd;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 /* .create-new {
@@ -85,10 +84,12 @@ body{
 
 .delete-btn {
     cursor: pointer;
+    text-align: center;
 }
 
 .delete-btn:hover {
-    color: #0000ff;
+    font-family: trash;
+    color: #ff1515;
     cursor: pointer;
 }
 
@@ -106,19 +107,20 @@ body{
 }
 
 .read-btn:hover {
-    color: #06c200;
+    color: #28ca41;
     cursor: pointer;
 }
 
 .div-b {
     padding: 0px;
-    background-color: #cedebd;
+    background-color: #fff;
     height: 700px;
 }
 
 .panel-title {
     text-align: center;
-    background-color: #86c4ba;
+    background-color: #dadada;
+    color:#464646;
 }
 
 
@@ -137,13 +139,14 @@ input[type="text"] {
 
 .rate-cell {
     cursor: pointer;
-    background-color: #86c4ba;
+    background-color: #6a64d9;
     text-align: center;
+    color:#fff;
 }
 
 .rate-cell:hover {
     cursor: pointer;
-    background-color: #6da59c;
+    background-color: #817dd8;
     text-align: center;
 }
 
@@ -159,13 +162,13 @@ input[type="text"] {
 }
 
 .page-btn {
-    background-color: #86c4ba;
+    background-color: #6a64d9;
     text-align: center;
     color: #f3f3f3;
 }
 
 .page-btn:hover {
-    background-color: #6ea097;
+    background-color: #817dd8;
     text-align: center;
     color: #f3f3f3;
 }
@@ -180,19 +183,20 @@ input[type="text"] {
 .page{
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #cedebd;
+    background-color: #dce1ff;
     margin-right: 1px;
 }
 
 .page:hover{
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #86c4ba;
+    background-color: #6a64d9;
     margin-right: 1px;
+    color: #fff;
 }
 
 .mark-page-btn{
-    background-color: #86c4ba;
+    background-color: #6a64d9;
     color: rgb(255, 255, 255);
 
 }

@@ -1,7 +1,5 @@
 'use strict'
 
-
-
 function onAddBookClick() {
     addBook();
     cleanModalFields(); // clean fields

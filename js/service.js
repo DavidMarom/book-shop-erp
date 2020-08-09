@@ -31,12 +31,12 @@ function renderBooks() {
 
     booksToRender.map((gBook) => {
         strHTML += `    
-            <div class="tc">${gBook.id}</div>
-            <div class="tc">${gBook.title}</div>
+            <div class="tc" >${gBook.id}</div>
+            <div class="tc read-btn" onclick="onClickRead(${gBook.id})">${gBook.title}</div>
             <div class="tc">${formatCurrency(gBook.price)}</div>
             <div class="tc read-btn" onclick="onClickRead(${gBook.id})" data-trans="read">Read</div>
             <div class="tc update-btn" onclick="onUpdateBookFromList(${gBook.id})" data-trans="update">Update</div>
-            <div class="tc delete-btn" onclick="onClickDelete(${gBook.id})" data-trans="delete">Delete</div>`
+            <div class="tc delete-btn" onclick="onClickDelete(${gBook.id})" ><i class="far fa-trash-alt"></i></div>`
     })
 
     var elTable = document.querySelector('.table');
@@ -322,7 +322,7 @@ function generatePageNumbers() {
     document.querySelector('.pages').innerHTML = HTMLstr;
 }
 
-function openCanvas(){
+function openCanvas() {
     //document.querySelector('.offcanvas-btn').classList.toggle('offcanvas-btn-open');
-    document.querySelector('.offcanvas-aside').classList.toggle('offcanvas-aside-open');    
+    document.querySelector('.offcanvas-aside').classList.toggle('offcanvas-aside-open');
 }
